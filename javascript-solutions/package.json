@@ -1,0 +1,10 @@
+{
+  "name": "javacript-solutions",
+  "version": "1.0.0",
+  "description": "A collection of javscript solutions for the advent of code problems 2019",
+  "main": "index.js",
+  "author": "Iha2",
+  "license": "MIT",
+  "private": true,
+  "type": "module"
+}

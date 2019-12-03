@@ -21,7 +21,7 @@ readInterface.on("close", () => console.log("total fuel", totalFuel));
 
 // Part 2
 
-const createFueledFuel = value => {
+const maxiumFuelRequirement = value => {
   let currentFuel = createFuel(value);
   let fuelChange = currentFuel;  
   while(true) {
@@ -34,13 +34,13 @@ const createFueledFuel = value => {
   return currentFuel;
 }
 
-let totalFuelFuel = 0;
+let maximumTotalFuel = 0;
 
 readInterface.on("line", line => {
-  const fuel = createFueledFuel(Number(line));
-  totalFuelFuel = totalFuelFuel + fuel;
+  const fuel = maxiumFuelRequirement(Number(line));
+  maximumTotalFuel = maximumTotalFuel + fuel;
 });
 
-readInterface.on("close", () => console.log("total fuel", totalFuelFuel));
+readInterface.on("close", () => console.log("total fuel", maximumTotalFuel));
 
 

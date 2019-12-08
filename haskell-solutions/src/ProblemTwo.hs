@@ -11,7 +11,7 @@ intCodeComputer (2:x:y:output:xs) code = intCodeComputer xs $ code // [(output, 
 intCodeComputer (99:xs) code = code
 
 state1202 :: Maybe [Int] -> [Int]
-state1202 Nothing = [2]
+state1202 Nothing = []
 state1202 (Just code) = toList $ fromList code // [(1,12), (2,2)]
 
 main :: IO ()

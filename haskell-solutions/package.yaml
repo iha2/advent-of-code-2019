@@ -37,6 +37,7 @@ executables:
     dependencies:
     - haskell-solutions
     - containers
+    - split
 tests:
   haskell-solutions-test:
     main:                Spec.hs

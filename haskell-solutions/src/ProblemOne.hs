@@ -1,3 +1,5 @@
+
+
 module ProblemOne
 ( 
   totalFuel
@@ -10,7 +12,7 @@ parseInt [] = Nothing
 parseInt num = Just $ read num
 
 calculateFuel :: Int -> Int
-calculateFuel mass = (floor(fromIntegral mass / 3) :: Int) - 2
+calculateFuel mass = (floor (fromIntegral mass / 3) :: Int) - 2
 
 updateFuel :: Int -> Int -> Int
 updateFuel currentFuel totalFuel = totalFuel + calculateFuel currentFuel
@@ -34,5 +36,11 @@ totalMaximumFuel :: Maybe [Int] -> Int
 totalMaximumFuel Nothing = 0
 totalMaximumFuel (Just masses) = foldr updateMaximumFuel 0 masses
 
+
+main :: IO ()
+main = do 
+  fileInfo <- readFile "inputs/input-1-2019.txt"
+  print . totalFuel . getModules $ fileInfo
+  print . totalMaximumFuel . getModules $ fileInfo
 
 
